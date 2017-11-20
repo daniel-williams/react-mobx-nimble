@@ -37,6 +37,7 @@ module.exports = function (options) {
         },
         {
           test: /\.scss$/,
+          include: [helpers.root('src', 'app')],
           use: [
             { loader: "style-loader" }, // creates style nodes from JS strings
             {
