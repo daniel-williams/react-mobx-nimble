@@ -13,11 +13,13 @@
     "removeComments": true,
     "strictNullChecks": false,
     "lib": [
-      "es2016",
+      "es6",
+      "es7",
       "dom"
     ]
   },
   "include": [
-    "src"
+    "src",
+    "config/typings"
   ]
 }

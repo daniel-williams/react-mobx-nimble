@@ -42,6 +42,15 @@ module.exports = function (options) {
             use: [
               { loader: "css-loader" }, // translates CSS into CommonJS
               {
+                loader: 'css-loader',
+                query: {
+                  modules: true,
+                  sourceMap: false,
+                  importLoaders: 1,
+                  localIdentName: '[local]__[hash:base64:5]'
+                }
+              },
+              {
                 loader: 'postcss-loader',
                 options: {
                   ident: 'postcss',

@@ -39,7 +39,15 @@ module.exports = function (options) {
           test: /\.scss$/,
           use: [
             { loader: "style-loader" }, // creates style nodes from JS strings
-            { loader: "css-loader" }, // translates CSS into CommonJS
+            {
+              loader: 'css-loader',
+              query: {
+                modules: true,
+                sourceMap: true,
+                importLoaders: 1,
+                localIdentName: '[local]__[hash:base64:5]'
+              }
+            },
             {
               loader: 'postcss-loader',
               options: {

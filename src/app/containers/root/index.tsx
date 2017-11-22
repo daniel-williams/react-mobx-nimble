@@ -1,25 +1,14 @@
 import * as React from 'react';
+import { Link, NavLink, Redirect, Route, Switch } from 'react-router-dom';
 
-import { appConstants } from '../../app-constants';
 import { EmptyProps, EmptyState } from '../../models';
+// import { TodoManager } from '../../components';
 
-import './style.scss';
+import './styles.scss';
 
-export class Root extends React.Component<EmptyProps, EmptyState> {
-  renderDevTool() {
-    if (appConstants.isDev) {
-      const DevTools = require('mobx-react-devtools').default;
 
-      return (<DevTools />);
-    }
-  };
-
-  render() {
-    return (
-      <div className="container">
-        {this.props.children}
-        {this.renderDevTool()}
-      </div>
-    );
-  }
-};
+export const Root = () => (
+  <section>
+    {/* <TodoManager /> */}
+  </section>
+);

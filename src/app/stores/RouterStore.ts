@@ -9,4 +9,4 @@ export class RouterStore extends BaseRouterStore {
       this.history = syncHistoryWithStore(history, this);
     }
   }
-};
+}
