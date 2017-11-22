@@ -1,7 +1,7 @@
 import { useStrict } from 'mobx';
 import { enableLogging } from 'mobx-logger';
 
-import { appConstants } from './app-constants';
+import { appConstants } from './app.constants';
 
 
 // MobX strict mode

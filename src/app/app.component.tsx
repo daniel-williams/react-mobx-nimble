@@ -6,9 +6,9 @@ import { Router } from 'react-router';
 
 import './mobx-config'; // configure strict mode and logger
 import { rootStore } from './stores';
-import { Root, DevTools } from './containers';
+import { Root, DevTools } from './components';
 
-import './app-style.scss';
+import './app.style.scss';
 
 
 const App = () => (
