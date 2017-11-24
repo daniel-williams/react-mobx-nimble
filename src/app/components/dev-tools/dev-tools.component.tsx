@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { appConstants } from '../../app-constants';
+import { appConstants } from '../../app.constants';
 import { EmptyProps, EmptyState } from '../../models';
 
 
@@ -15,7 +15,7 @@ export class DevTools extends React.Component<EmptyProps, EmptyState> {
 
   render() {
     return (
-      <div className="container">
+      <div>
         {this.props.children}
         {this.renderDevTool()}
       </div>
