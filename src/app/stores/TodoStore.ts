@@ -37,36 +37,36 @@ export class TodoStore {
   }
 
   @action
-  add = (todo: Partial<Todo>): void => {
+  addTodo = (todo: Partial<Todo>): void => {
     this.todos.push(new Todo(todo.text, todo.completed));
   }
 
   @action
-  edit = (id: number, data: Partial<Todo>): void => {
+  editTodo = (id: number, data: Partial<Todo>): void => {
     this.todos = this.todos.map(x => x.id !== id
       ? x
       : {
         ...x,
-        text: data.text.toString(),
+        text: data.text ? data.text.toString() : x.text,
         completed: !!data.completed,
       });
   }
 
   @action
-  delete = (id: number): void => {
+  removeTodo = (id: number): void => {
     this.todos = this.todos.filter(x => x.id !== id);
   }
 
   @action
-  completeAll = (): void => {
+  toggleCompleted = (completed: boolean = true): void => {
     this.todos = this.todos.map(x => ({
       ...x,
-      completed: true
+      completed
     }));
   }
 
   @action
-  deleteCompleted = (): void => {
+  removeCompleted = (): void => {
     this.todos = this.todos.filter(x => !x.completed);
   }
 

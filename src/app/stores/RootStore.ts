@@ -10,8 +10,7 @@ const history = createBrowserHistory();
 const router = new RouterStore(history);
 const todos = new TodoStore();
 
-todos.add(new Todo('drink coffee'));
-todos.add(new Todo('code'));
+todos.addTodo(new Todo('coffee'));
 
 // MobX rootStore
 export const rootStore = {
