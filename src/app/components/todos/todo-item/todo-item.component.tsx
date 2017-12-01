@@ -71,7 +71,7 @@ export class TodoItem extends React.Component<TodoItemProps, TodoItemState> {
       'fa-square-o': !todo.completed,
       'fa-check-square-o': todo.completed
     });
-    const deletedClasses = classNames(styles.icon, 'fa', 'fa-trash-o');
+    const deletedClasses = classNames(styles.icon, 'fa', 'fa-times');
     const editorEl = this.state.editing
       ? <TodoItemEditor text={todo.text} onSave={this.handleSave} />
       : null;

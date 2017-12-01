@@ -24,7 +24,9 @@ export class Todos extends React.Component<any, any> {
   }
 
   render() {
-    const { addTodo, filtered } = this.todoStore;
+    const { addTodo, filtered, setTodoFilter, removeCompleted, filter } = this.todoStore;
+    const totalCount = filtered.length;
+    const remainingCount = filtered.filter(x => !x.completed).length;
 
     return (
       <div className={styles.todoWrap}>
@@ -35,7 +37,12 @@ export class Todos extends React.Component<any, any> {
         <div className={styles.todoItemsWrap}>
           {this.renderTodos(filtered)}
         </div>
-        <TodosFooter />
+        <TodosFooter
+          totalCount={totalCount}
+          remainingCount={remainingCount}
+          setTodoFilter={setTodoFilter}
+          removeCompleted={removeCompleted}
+          currentFilter={filter}/>
       </div>
     );
   }
