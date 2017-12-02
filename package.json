@@ -2,7 +2,7 @@
   "name": "react-mobx-nimble",
   "version": "1.0.0",
   "license": "MIT",
-  "description": "Hacking starter",
+  "description": "Nimble React starter using JSX, Typescript, Webpack 3 and MobX for state management.",
   "author": {
     "name": "Daniel James Williams",
     "email": "mail@danielwilliams.us"
@@ -23,10 +23,13 @@
     "_build": "webpack -p --progress --colors"
   },
   "keywords": [
+    "boilerplate",
     "MobX",
+    "nimble",
     "React",
     "seed",
     "starter",
+    "todo",
     "Typescript",
     "Webpack"
   ],

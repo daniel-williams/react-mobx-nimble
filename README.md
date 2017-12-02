@@ -1,5 +1,5 @@
 # React MobX Nimble
-Nimble starter using JSX, Typescript, Webpack 3 and MobX for state management.
+Nimble React starter using JSX, Typescript, Webpack 3 and MobX for state management.
 
 # Table of Contents
 * [Overview](#overview)
@@ -11,6 +11,24 @@ Nimble starter using JSX, Typescript, Webpack 3 and MobX for state management.
 ## Overview
 This starter includes a sample React Todo app which demostrates MobX integration and patterns. It's primary purpose is educational and to serve as a hacking starter.
 
+### Features
+* [Mobx](https://github.com/mobxjs/mobx)
+* [Mobx React](https://github.com/mobxjs/mobx-react)
+* [Mobx React Devtools](https://github.com/mobxjs/mobx-react-devtools)
+* [Mobx React Router](https://github.com/alisd23/mobx-react-router/)
+* [React](https://facebook.github.io/react/) 16
+* [React Router](https://github.com/ReactTraining/react-router) 4.2
+* [Todo example](http://todomvc.com)
+* [Typescript](https://www.typescriptlang.org/) 2.5
+
+### Build tools
+* [Awesome Typescript Loader](https://github.com/s-panferov/awesome-typescript-loader)
+* [CSS modules](https://github.com/css-modules/css-modules)
+* [ExtractText Plugin](https://github.com/webpack/extract-text-webpack-plugin)
+* [HTML Webpack Plugin](https://github.com/ampedandwired/html-webpack-plugin)
+* [PostCSS Loader](https://github.com/postcss/postcss-loader)
+* [Webpack](https://webpack.github.io) 3.8
+* [Webpack Dev Server](https://github.com/webpack/webpack-dev-server)
 
 ## Quick Start
 Clone or Fork this repo to get started
@@ -24,13 +42,19 @@ Install dependencies
 $ yarn
 
 # using npm
-npm i
+$ npm i
 ```
 
-Spin up dev server
+Development
 ```bash
 # browse to http:\\localhost:3000
-npm run dev
+$ npm start
+```
+
+Build
+```bash
+# output to /dist
+$ npm run build:prod
 ```
 
 ## File Structure
