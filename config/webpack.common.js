@@ -7,7 +7,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 
-const extractedVendorStyles = new ExtractTextPlugin('assets/bundles/vendorStyles.[contenthash].css');
+const extractedVendorStyles = new ExtractTextPlugin({
+  filename: 'assets/bundles/vendorStyles.[contenthash].css'
+});
 
 module.exports = function (options) {
   let ENV = JSON.stringify(options.env);

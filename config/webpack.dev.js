@@ -1,6 +1,5 @@
-var commonConfig = require('./webpack.common.js');
-var helpers = require('./helpers');
-
+const commonConfig = require('./webpack.common.js');
+const helpers = require('./helpers');
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 
